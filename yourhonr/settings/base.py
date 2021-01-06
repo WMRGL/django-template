@@ -13,6 +13,8 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from celery.schedules import crontab
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Application definition
@@ -24,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'django_celery_beat',
     'channels',
     'worklog.apps.WorklogConfig',
 ]
@@ -133,4 +136,15 @@ LOGGING = {
             'propagate': False,
         }
     },
+}
+
+# Scheduling
+# NB not in local since this forms the application definition
+CELERY_BEAT_SCHEDULE = {
+    'test': {
+        'task': 'worklog.tasks.test',
+        'args': ['hello, world!'],
+        # runs every minute until you change this
+        'schedule': crontab(minute='*/1')
+    }
 }
