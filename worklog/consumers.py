@@ -1,6 +1,10 @@
 import json
+import logging
 
 from channels.generic.websocket import WebsocketConsumer
+
+
+logger = logging.getLogger('application')
 
 
 class WorklogConsumer(WebsocketConsumer):
@@ -18,6 +22,7 @@ class WorklogConsumer(WebsocketConsumer):
         # extract message
         text_data_json = json.loads(text_data)
         message = text_data_json['message']
+        logger.info(f'received message: {message}')
 
         # send message
         self.send(text_data=json.dumps({'message': message}))
