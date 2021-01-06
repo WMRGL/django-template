@@ -31,7 +31,7 @@ CHANNEL_LAYERS = {
 
 # Celery
 CELERY_BROKER_URL = 'amqp://<vhost_user>:<vhost_passwd>@127.0.0.1:5672/<vhost>'
-CELERY_RESULT_BACKEND = 'amqp'
+CELERY_RESULT_BACKEND = 'rpc'
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
