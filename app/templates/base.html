@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- project files -->
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+
+        <!-- dependencies -->
+        <link rel="stylesheet" type="text/css" href="{% static 'dependencies/fomantic/css/fomantic.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'dependencies/dataTables/css/dataTables.semanticui.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'dependencies/dataTables/css/buttons.semanticui.min.css' %}">
+        <script src="{% static 'dependencies/jquery/js/jquery.min.js' %}"></script>
+        <script type="text/javascript" charset="utf8" src="{% static 'dependencies/dataTables/js/jquery.dataTables.js' %}"></script>
+        <script type="text/javascript" charset="utf8" src="{% static 'dependencies/dataTables/js/dataTables.semanticui.min.js' %}"></script>
+        <script src="{% static 'dependencies/fomantic/js/fomantic.min.js' %}"></script>
+        <script src="{% static 'dependencies/js.cookie-2.2.1.min.js' %}"></script>
+
+        <!-- TODO: change project name here -->
+        <title>Project Name - {{ page_title }}</title>
+
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+    <script src="{% static 'js/base.js' %}"></script>
+</html>
