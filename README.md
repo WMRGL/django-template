@@ -5,7 +5,8 @@ Steps
 - Make your own repo
 - Download the source code from this repo as a zip and add to your git repo
 - Change the name of 'project' and 'app' to whatever you like
-- migrate
+- Run migrations.
+- Set up auditing: `python manage.py migrate easyaudit`
 
 ## Logging
 - To add log calls (rather than prints which are not picked up using the gunicorn method in the django SOP) use:
