@@ -15,7 +15,7 @@ logger = logging.getLogger('application')
 logger.info('info log')
 logger.error('error log')  # etc etc
 ```
-- Database calls can be logged too if the environment variable DJANGO_LOG_LEVEL is set to 'INFO' before running runserver/gunicorn
+- Database calls can be logged too if the environment variable DJANGO_LOG_LEVEL is set to 'DEBUG' before running runserver/gunicorn
 
 ## Celery
 More info here: https://docs.celeryproject.org/en/stable/index.html
