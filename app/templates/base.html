@@ -22,8 +22,12 @@
 
     </head>
     <body>
-        {% block content %}
-        {% endblock %}
+        <div class="ui one column padded grid">
+        <div class="column">
+            {% block content %}
+            {% endblock %}
+        </div>
+        </div>
     </body>
     <script src="{% static 'js/base.js' %}"></script>
 </html>
