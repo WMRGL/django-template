@@ -1,5 +1,5 @@
 """
-ASGI config for yourhonr project.
+ASGI config for project project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -12,15 +12,15 @@ from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
 from django.core.asgi import get_asgi_application
 
-import worklog.routing
+import app.routing
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'yourhonr.settings.local')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings.local')
 
 application = ProtocolTypeRouter({
     'http': get_asgi_application(),
     'websocket': AuthMiddlewareStack(
         URLRouter(
-            worklog.routing.websocket_urlpatterns
+            app.routing.websocket_urlpatterns
         )
     )
 })

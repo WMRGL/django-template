@@ -1,4 +1,4 @@
-from yourhonr.settings.base import *
+from project.settings.base import *
 
 # Security
 DEBUG = True

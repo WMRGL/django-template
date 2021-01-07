@@ -7,7 +7,7 @@ from channels.generic.websocket import WebsocketConsumer
 logger = logging.getLogger('application')
 
 
-class WorklogConsumer(WebsocketConsumer):
+class AppConsumer(WebsocketConsumer):
     def connect(self):
         self.accept()
 
