@@ -9,7 +9,7 @@ from app import endpoints
 
 # Channels
 websocket_urlpatterns = [
-    re_path(r'ws/app/(?P<group_name>\w+)/$', consumers.AppConsumer.as_asgi())
+    re_path(r'ws/app/(?P<group_name>\w+)[/]?$', consumers.AppConsumer.as_asgi())
 ]
 
 # RESTful API

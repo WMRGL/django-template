@@ -15,4 +15,23 @@
             change to the User table.
         </div>
     </div>
+    <table id="users-example" class="ui celled table" style="width:100%">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>last_login</th>
+            <th>is_superuser</th>
+            <th>username</th>
+            <th>first_name</th>
+            <th>last_name</th>
+            <th>email</th>
+            <th>is_staff</th>
+            <th>is_active</th>
+            <th>date_joined</th>
+            <th>groups</th>
+            <th>user_permissions</th>
+        </tr>
+        </thead>
+    </table>
+    <script src="{% static 'js/index.js' %}"></script>
 {% endblock %}
