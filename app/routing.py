@@ -8,7 +8,6 @@ from app import endpoints
 
 
 # Channels
-
 websocket_urlpatterns = [
     re_path(r'ws/app/(?P<group_name>\w+)/$', consumers.AppConsumer.as_asgi())
 ]
@@ -17,7 +16,7 @@ websocket_urlpatterns = [
 router = routers.DefaultRouter()
 router.register(r'users', endpoints.UserViewSet)
 
-endpoint_urlpatters = [
+endpoint_urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
