@@ -3,5 +3,16 @@
 {% block content %}
     <h1>Hello, world! <em class="loading" data-emoji="beetle"></em></h1>
     <div class="ui divider"></div>
-    <p>Content goes here</p>
+    <h2>Users</h2>
+    <div class="ui bulleted list">
+        <div class="item">
+            This table is built using DataTables which fetches its data from the
+            'api/users' endpoint.
+        </div>
+        <div class="item">
+            Furthermore, a websocket in the JavaScript for this page is set up
+            to refresh the API call and table whenever the host registers a
+            change to the User table.
+        </div>
+    </div>
 {% endblock %}
