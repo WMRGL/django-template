@@ -14,9 +14,9 @@ websocket_urlpatterns = [
 
 # RESTful API
 router = routers.DefaultRouter()
-router.register(r'users', endpoints.UserViewSet)
+router.register('users', endpoints.UserViewSet)
 
-endpoint_urlpatterns = [
+urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
