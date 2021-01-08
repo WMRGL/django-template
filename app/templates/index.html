@@ -3,18 +3,12 @@
 {% block content %}
     <h1>Hello, world! <em class="loading" data-emoji="beetle"></em></h1>
     <div class="ui divider"></div>
-    <h2>Users</h2>
-    <div class="ui bulleted list">
-        <div class="item">
-            This table is built using DataTables which fetches its data from the
-            'api/users' endpoint.
+    <h2 class="ui header">
+        Users
+        <div class="sub header">
+            Real-Time View of All Users
         </div>
-        <div class="item">
-            Furthermore, a websocket in the JavaScript for this page is set up
-            to refresh the API call and table whenever the host registers a
-            change to the User table.
-        </div>
-    </div>
+    </h2>
     <table id="users-example" class="ui celled table" style="width:100%">
         <thead>
         <tr>
@@ -33,5 +27,27 @@
         </tr>
         </thead>
     </table>
+    <div class="ui bulleted list">
+        <div class="item">
+            This is a demo of channels/django rest framework/datatables
+            integration.
+        </div>
+        <div class="item">
+            The table is built using DataTables which fetches the data of all
+            users from the 'api/users' endpoint.
+        </div>
+        <div class="item">
+            Whenever a change is made to the User table, signal receiver code
+            (in app.handlers) sends a message to the WebSocket consumer, which
+            passes the message to a websocket here in the client-executed JS.
+        </div>
+        <div class="item">
+            This prompts the DataTable to refresh its data from the API endpoint
+        </div>
+        <div class="item">
+            Once the template is installed, add a user using createsuperuser and
+            ensure it appears here without refreshing the page.
+        </div>
+    </div>
     <script src="{% static 'js/index.js' %}"></script>
 {% endblock %}
