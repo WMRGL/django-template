@@ -27,26 +27,29 @@
         </tr>
         </thead>
     </table>
-    <div class="ui bulleted list">
-        <div class="item">
-            This is a demo of channels/django rest framework/datatables
-            integration.
-        </div>
-        <div class="item">
-            The table is built using DataTables which fetches the data of all
-            users from the 'api/users' endpoint.
-        </div>
-        <div class="item">
-            Whenever a change is made to the User table, signal receiver code
-            (in app.handlers) sends a message to the WebSocket consumer, which
-            passes the message to a websocket here in the client-executed JS.
-        </div>
-        <div class="item">
-            This prompts the DataTable to refresh its data from the API endpoint
-        </div>
-        <div class="item">
-            Once the template is installed, add a user using createsuperuser and
-            ensure it appears here without refreshing the page.
+    <div class="ui message">
+        <div class="header">Description</div>
+        <div class="ui bulleted list">
+            <div class="item">
+                This is a demo of channels/django rest framework/datatables
+                integration.
+            </div>
+            <div class="item">
+                The table is built using DataTables which fetches the data of all
+                users from the 'api/users' endpoint.
+            </div>
+            <div class="item">
+                Whenever a change is made to the User table, signal receiver code
+                (in app.handlers) sends a message to the WebSocket consumer, which
+                passes the message to a websocket here in the client-executed JS.
+            </div>
+            <div class="item">
+                This prompts the DataTable to refresh its data from the API endpoint
+            </div>
+            <div class="item">
+                Once the template is installed, add a user using createsuperuser and
+                ensure it appears here without refreshing the page.
+            </div>
         </div>
     </div>
     <script src="{% static 'js/index.js' %}"></script>

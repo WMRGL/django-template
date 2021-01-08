@@ -28,8 +28,6 @@ $(document).ready(function() {
 
     // refresh ajax source from API every time message is received
     usersSocket.onmessage = function(event) {
-        console.log('reloading table...')
         usersDataTable.ajax.reload();
-        console.log('success!')
     }
 });
