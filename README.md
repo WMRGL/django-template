@@ -3,6 +3,7 @@ a template from which django apps can be started pre-loaded with celery, channel
 
 Steps
 - Click 'use this template' at the top right of this page and create your repo. 
+- `pip install -r requirements.txt` in your venv
 - Change the name of 'project' and 'app' to whatever you like. You can even leave them the same if you want.
 - Duplicate the 'project/settings/example_local.py' file to 'project/settings/local.py' and enter necessary security and database details.
 - Run migrations.
