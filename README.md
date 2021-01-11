@@ -2,9 +2,8 @@
 a template from which django apps can be started pre-loaded with celery, channels, and logging
 
 Steps
-- Make your own repo
-- Download the source code from this repo as a zip and add to your git repo
-- Change the name of 'project' and 'app' to whatever you like
+- Click 'use this template' at the top right of this page and create your repo. 
+- Change the name of 'project' and 'app' to whatever you like. You can even leave them the same if you want.
 - Duplicate the 'project/settings/example_local.py' file to 'project/settings/local.py' and enter necessary security and database details.
 - Run migrations.
 - Set up auditing: `python manage.py migrate easyaudit`
