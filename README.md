@@ -1,6 +1,6 @@
 # django-template
 A template from which django apps can be started pre-loaded with:
-- *Django utilities*: Channels, Celery + Celerybeat, Django REST Framework, Django-Extensions/IPython Shell.
+- *Django utilities*: Channels, Celery + Celerybeat, Django REST Framework, EasyAudit, Django-Extensions/IPython Shell.
 - *Web utitilies*: JQuery, SemanticUI CSS, DataTables.
 
 ### Steps
