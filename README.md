@@ -1,13 +1,15 @@
 # django-template
-a template from which django apps can be started pre-loaded with celery, channels, and logging
+A template from which django apps can be started pre-loaded with:
+- *Django utilities*: Channels, Celery + Celerybeat, Django REST Framework, EasyAudit, Django-Extensions/IPython Shell.
+- *Web utitilies*: JQuery, SemanticUI CSS, DataTables.
 
-Steps
-- Make your own repo
-- Download the source code from this repo as a zip and add to your git repo
-- Change the name of 'project' and 'app' to whatever you like
+### Steps
+- Click 'use this template' at the top right of this page and create your repo. 
+- `pip install -r requirements.txt` in your venv
+- Change the name of 'project' and 'app' to whatever you like. You can even leave them the same if you want.
 - Duplicate the 'project/settings/example_local.py' file to 'project/settings/local.py' and enter necessary security and database details.
-- Run migrations.
-- Set up auditing: `python manage.py migrate easyaudit`
+- Run migrations: `python manage.py migrate; python manage.py migrate app`.
+- Set up auditing: `python manage.py migrate easyaudit`.
 
 ## Logging
 - To add log calls (rather than prints which are not picked up using the gunicorn method in the django SOP) use:
