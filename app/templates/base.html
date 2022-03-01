@@ -4,17 +4,17 @@
     <head>
         <meta charset="UTF-8">
         <!-- project files -->
-        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
-        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}?version={{version}}"/>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}?version={{version}}" type="text/css">
 
         <!-- dependencies: css -->
-        <link rel="stylesheet" type="text/css" href="{% static 'dependencies/fomantic/css/fomantic.min.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'dependencies/dataTables/dataTables.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'dependencies/fomantic/css/fomantic.min.css' %}?version={{version}}">
+        <link rel="stylesheet" type="text/css" href="{% static 'dependencies/dataTables/dataTables.min.css' %}?version={{version}}">
         <!-- dependencies: js -->
-        <script src="{% static 'dependencies/jquery/js/jquery.min.js' %}"></script>
-        <script type="text/javascript" charset="utf8" src="{% static 'dependencies/dataTables/dataTables.min.js' %}"></script>
-        <script src="{% static 'dependencies/fomantic/js/fomantic.min.js' %}"></script>
-        <script src="{% static 'dependencies/js.cookie-2.2.1.min.js' %}"></script>
+        <script src="{% static 'dependencies/jquery/js/jquery.min.js' %}?version={{version}}"></script>
+        <script type="text/javascript" charset="utf8" src="{% static 'dependencies/dataTables/dataTables.min.js' %}?version={{version}}"></script>
+        <script src="{% static 'dependencies/fomantic/js/fomantic.min.js' %}?version={{version}}"></script>
+        <script src="{% static 'dependencies/js.cookie-2.2.1.min.js' %}?version={{version}}"></script>
 
         <!-- TODO: change project name here -->
         <title>Project Name - {{ page_title }}</title>
@@ -28,5 +28,5 @@
         </div>
         </div>
     </body>
-    <script src="{% static 'js/base.js' %}"></script>
+    <script src="{% static 'js/base.js' %}?version={{version}}"></script>
 </html>
