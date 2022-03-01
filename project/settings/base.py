@@ -97,16 +97,6 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_ROOT = BASE_DIR / 'static'
-STATIC_DIR = STATIC_ROOT
-STATIC_URL = '/static/'
-MEDIA_ROOT = BASE_DIR / 'media' / 'files'
-MEDIA_URL = '/media/'
-
 # Django Extensions
 SHELL_PLUS = 'ipython'
 
@@ -144,6 +134,8 @@ LOGGING = {
         }
     },
 }
+
+DJANGO_EASY_AUDIT_WATCH_REQUEST_EVENTS = False
 
 # Scheduling
 # NB not in local since this forms the application definition
