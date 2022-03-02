@@ -1,1 +1,4 @@
 /*TODO: add site-wide css here*/
+body, .ui, .header, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial' !important;
+}
