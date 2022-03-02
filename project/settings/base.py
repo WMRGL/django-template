@@ -59,6 +59,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'project.context_processors.version',
             ],
         },
     },
@@ -140,10 +141,10 @@ DJANGO_EASY_AUDIT_WATCH_REQUEST_EVENTS = False
 # Scheduling
 # NB not in local since this forms the application definition
 CELERY_BEAT_SCHEDULE = {
-    'test': {
-        'task': 'app.tasks.test',
-        'args': ['hello, world!'],
-        # runs every minute until you change this
-        'schedule': crontab(minute='*/1')
-    }
+    #'test': {
+    #   'task': 'app.tasks.test',
+    #   'args': ['hello, world!'],
+    #   # runs every minute until you change this
+    #   'schedule': crontab(minute='*/1')
+    #}
 }

@@ -25,9 +25,9 @@ DATABASES = {
 # Channels
 CHANNEL_LAYERS = {
     'default': {
-        'BACKEND': 'channels_rabbitmq.core.RabbitmqChannelLayer',
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'host': 'amqp://<vhost_user>:<vhost_passwd>@127.0.0.1:5672/<vhost>'
+            'hosts': [('127.0.0.1', 6379)]
         }
     }
 }
@@ -44,7 +44,7 @@ CACHES = {
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-STATIC_ROOT = BASE_DIR / 'static' / f"v{VERSION}"
+STATIC_ROOT = BASE_DIR / 'static'
 STATIC_DIR = STATIC_ROOT
 STATIC_URL = '/static/'
 MEDIA_ROOT = BASE_DIR / 'media' / 'files'
